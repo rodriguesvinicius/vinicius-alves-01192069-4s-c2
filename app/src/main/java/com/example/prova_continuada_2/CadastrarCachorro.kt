@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.example.prova_continuada_2.connections.Conexao
 import com.example.prova_continuada_2.connections.models.Cachorro
 import com.example.prova_continuada_2.connections.responses.CachorroResponse
@@ -40,8 +41,8 @@ class CadastrarCachorro : AppCompatActivity() {
             ) {
                 val successo : TextView = findViewById(R.id.tv_success)
                 val successo2 : ImageView = findViewById(R.id.iv_foto)
-                successo.visibility
-                successo2.visibility
+                successo.isVisible = true
+                successo2.isVisible = true
                 Toast.makeText(baseContext, "Sucesso", Toast.LENGTH_SHORT).show()
             }
 
