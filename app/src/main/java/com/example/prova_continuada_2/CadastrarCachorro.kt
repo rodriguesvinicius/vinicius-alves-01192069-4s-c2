@@ -31,7 +31,7 @@ class CadastrarCachorro : AppCompatActivity() {
         var precoMedio : Double = 0.0
         precoMedio = if (etPrecoMedio.text.isBlank()) 0.0 else etPrecoMedio.text.toString().toDouble()
 
-        val cachorro  = Cachorro("",etRaca.toString(),precoMedio, switch.isChecked)
+        val cachorro  = Cachorro("",etRaca.text.toString(),precoMedio, switch.isChecked)
 
         createDog.createDog(cachorro).enqueue(object : Callback<CachorroResponse> {
             override fun onResponse(
