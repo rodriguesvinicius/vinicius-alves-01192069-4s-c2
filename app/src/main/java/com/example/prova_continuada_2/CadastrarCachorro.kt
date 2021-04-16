@@ -38,6 +38,10 @@ class CadastrarCachorro : AppCompatActivity() {
                 call: Call<CachorroResponse>,
                 response: Response<CachorroResponse>
             ) {
+                val successo : TextView = findViewById(R.id.tv_success)
+                val successo2 : ImageView = findViewById(R.id.iv_foto)
+                successo.visibility
+                successo2.visibility
                 Toast.makeText(baseContext, "Sucesso", Toast.LENGTH_SHORT).show()
             }
 
