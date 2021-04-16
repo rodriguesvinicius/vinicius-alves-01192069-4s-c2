@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/TitleCachorro"
+        android:textColorHint="@color/black"
+        android:id="@+id/tv_topo"
+        android:textSize="30sp"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_raca"
+        android:gravity="center"
+        android:hint="Raça do cachorro"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_topo"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_preco_medio"
+        android:gravity="center"
+        android:hint="Preço Médio"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_raca"
+        />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:hint="@string/indicado"
+        android:textColorHint="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/sw_indicado"
+        app:layout_constraintTop_toBottomOf="@+id/et_preco_medio"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Cadastrar"
+        android:layout_marginTop="25dp"
+        android:id="@+id/btn_cadastrar"
+        android:onClick="cadastrarDog"
+        app:layout_constraintTop_toBottomOf="@+id/sw_indicado"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Cadastrado com sucesso"
+        android:textColorHint="#00b894"
+        android:id="@+id/tv_success"
+        android:visibility="invisible"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar"
+        android:textSize="20sp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/smiledog"
+        android:id="@+id/iv_foto"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar"
+        android:onClick="trocar"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
